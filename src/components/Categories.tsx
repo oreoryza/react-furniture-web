@@ -26,7 +26,7 @@ const Categories: React.FC = () => {
             <h2 className="text-4xl font-semibold max-w-44">New In Store Now</h2>
             <div className="flex justify-center flex-col gap-12">
                 <p>Get the latest items immediately with promo prices</p>
-                <a className="underline lg:flex hidden">Check All<i className="bi bi-arrow-right text-lg ml-2"></i></a>
+                <a href="" className="group underline lg:flex hidden">Check All<i className="bi bi-arrow-right text-lg ml-2 group-hover:ml-3 duration-200"></i></a>
             </div>
         </div>
         <div className="flex gap-2 overflow-x-auto overflow-y-hidden category">

@@ -18,7 +18,7 @@ const Header: React.FC = () => {
     <header>
       {header && (
         <div className="-translate-y-48">
-          <div className="relative flex justify-center items-center">
+          <div className="relative flex justify-center items-center bg-[#286F6C]/[.5]">
             <div className="absolute flex flex-col justify-center items-center text-white mt-20">
               <h1 className="text-5xl font-semibold max-w-[50rem] text-center my-10">
                 {header.title}

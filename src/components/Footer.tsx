@@ -67,76 +67,76 @@ const Footer: React.FC = () => {
       <div className="md:flex justify-between grid grid-cols-2 gap-16">
         <ul className="flex flex-col gap-3 text-sm">
           <li className="font-medium text-xl mb-1">Our Products</li>
-          <li>
+          <li className="hover:underline">
             <a href="">The Support Suite</a>
           </li>
-          <li>
+          <li className="hover:underline">
             <a href="">The Sales Suite</a>
           </li>
-          <li>
+          <li className="hover:underline">
             <a href="">Support</a>
           </li>
-          <li>
+          <li className="hover:underline">
             <a href="">Guide</a>
           </li>
         </ul>
         <ul className="flex flex-col gap-3 text-sm">
           <li className="font-medium text-xl mb-1">Top Features</li>
-          <li>
+          <li className="hover:underline">
             <a href="">Ticketing System</a>
           </li>
-          <li>
+          <li className="hover:underline">
             <a href="">Knowledge Base</a>
           </li>
-          <li>
+          <li className="hover:underline">
             <a href="">Community Forums</a>
           </li>
-          <li>
+          <li className="hover:underline">
             <a href="">Help Desk Software</a>
           </li>
         </ul>
         <ul className="flex flex-col gap-3 text-sm">
           <li className="font-medium text-xl mb-1">Resources</li>
-          <li>
+          <li className="hover:underline">
             <a href="">Product Support</a>
           </li>
-          <li>
+          <li className="hover:underline">
             <a href="">Request Demo</a>
           </li>
-          <li>
+          <li className="hover:underline">
             <a href="">Library</a>
           </li>
-          <li>
+          <li className="hover:underline">
             <a href="">Peoplepower Blog</a>
           </li>
         </ul>
         <ul className="flex flex-col gap-3 text-sm">
           <li className="font-medium text-xl mb-1">Company</li>
-          <li>
+          <li className="hover:underline">
             <a href="">About Us</a>
           </li>
-          <li>
+          <li className="hover:underline">
             <a href="">Press</a>
           </li>
-          <li>
+          <li className="hover:underline">
             <a href="">Investors</a>
           </li>
-          <li>
+          <li className="hover:underline">
             <a href="">Events</a>
           </li>
         </ul>
         <ul className="flex flex-col gap-3 text-sm">
           <li className="font-medium text-xl mb-1">Favourite Things</li>
-          <li>
+          <li className="hover:underline">
             <a href="">For Enterprise</a>
           </li>
-          <li>
+          <li className="hover:underline">
             <a href="">For Startups</a>
           </li>
-          <li>
+          <li className="hover:underline">
             <a href="">For Benchmark</a>
           </li>
-          <li>
+          <li className="hover:underline">
             <a href="">For Small Business</a>
           </li>
         </ul>

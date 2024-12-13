@@ -6,7 +6,7 @@ const Navbar: React.FC = () => {
 
   const handleScroll = () => {
     const scrollY = window.scrollY;
-    if (scrollY > 600) {
+    if (scrollY > 150) {
       setBgColor("bg-[#286F6C]/[.6] backdrop-blur-xl");
     } else {
       setBgColor("transparent");

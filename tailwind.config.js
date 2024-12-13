@@ -5,6 +5,10 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    fontFamily: {
+      'saira': ['Saira', 'sans-serif'],
+      'raleway': ['Raleway', 'sans-serif'],
+    },
     extend: {},
   },
   plugins: [],

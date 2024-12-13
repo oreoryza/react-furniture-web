@@ -16,47 +16,70 @@ const Header: React.FC = () => {
     dispatch(getData());
   }, [dispatch]);
 
-  if (loading) {
-    return <h2>Loading...</h2>;
-  }
-
-  if (error) {
-    return <h2>{error}</h2>;
-  }
-
   return (
     <header>
       {header && (
-        <div className="relative flex justify-center items-center lg:-translate-y-48 ">
-          <div className="absolute flex flex-col justify-center items-center text-white mt-20">
-            <h1 className="text-5xl font-bold max-w-[50rem] text-center my-10">{header.title}</h1>
-            <p className="max-w-lg text-center">{header.description}</p>
-            <button className="font-bold text-lg py-3 px-16 bg-white/[.4] rounded-xl backdrop-blur-sm mt-12">Shop Now</button>
+        <div className="-translate-y-48">
+          <div className="relative flex justify-center items-center">
+            <div className="absolute flex flex-col justify-center items-center text-white mt-20">
+              <h1 className="text-5xl font-semibold max-w-[50rem] text-center my-10">
+                {header.title}
+              </h1>
+              <p className="max-w-lg text-center">{header.description}</p>
+              <button className="font-semibold text-lg py-3 px-16 bg-white/[.4] rounded-xl backdrop-blur-sm mt-12">
+                Shop Now
+              </button>
+            </div>
+            <div className="absolute bottom-0 bg-gradient-to-t from-white to-transparent h-16 w-full"></div>
+            <div className="absolute -bottom-14 w-full lg:px-32 px-6">
+              <div className="lg:flex justify-evenly grid grid-cols-3 gap-4 w-full bg-[#286F6C] py-6 lg:px-0 px-6 rounded-xl text-white">
+                <div className="flex flex-col justify-center items-center">
+                  <p className="text-3xl font-semibold">{data.experience}</p>
+                  <p className="text-center">
+                    Year
+                    <br />
+                    Experience
+                  </p>
+                </div>
+                <div className="flex justify-center items-center">
+                  <div className="w-0.5 h-24 flex bg-white"></div>
+                </div>
+                <div className="flex flex-col justify-center items-center">
+                  <p className="text-3xl font-semibold">{data.country}</p>
+                  <p className="text-center">
+                    Opened in
+                    <br />
+                    the country
+                  </p>
+                </div>
+                <div className="w-0.5 h-24 bg-white lg:flex hidden"></div>
+                <div className="flex flex-col justify-center items-center">
+                  <p className="text-3xl font-semibold">{data.sold}</p>
+                  <p className="text-center">
+                    Furniture
+                    <br />
+                    Sold
+                  </p>
+                </div>
+                <div className="flex justify-center items-center">
+                  <div className="w-0.5 h-24 flex bg-white"></div>
+                </div>
+                <div className="flex flex-col justify-center items-center">
+                  <p className="text-3xl font-semibold">{data.variant}</p>
+                  <p className="text-center">
+                    Variant
+                    <br />
+                    Furniture
+                  </p>
+                </div>
+              </div>
+            </div>
+            <img
+              src={header.banner}
+              alt="Banner"
+              className="object-cover min-h-[60rem] w-full"
+            />
           </div>
-          <div className="absolute bottom-0 bg-gradient-to-t from-white to-transparent h-16 w-full">
-          </div>
-          <div className="absolute -bottom-14 bg-[#286F6C] flex justify-evenly w-[75%] py-6 rounded-xl text-white">
-            <div className="flex flex-col justify-center items-center">
-                <p className="text-3xl font-bold">{data.experience}</p>
-                <p className="text-center">Year<br />Experience</p>
-            </div>
-            <div className="w-0.5 h-24 bg-white"></div>
-            <div className="flex flex-col justify-center items-center">
-                <p className="text-3xl font-bold">{data.country}</p>
-                <p className="text-center">Year<br />Experience</p>
-            </div>
-            <div className="w-0.5 h-24 bg-white"></div>
-            <div className="flex flex-col justify-center items-center">
-                <p className="text-3xl font-bold">{data.sold}</p>
-                <p className="text-center">Year<br />Experience</p>
-            </div>
-            <div className="w-0.5 h-24 bg-white"></div>
-            <div className="flex flex-col justify-center items-center">
-                <p className="text-3xl font-bold">{data.variant}</p>
-                <p className="text-center">Year<br />Experience</p>
-            </div>
-          </div>
-          <img src={header.banner} alt="Banner" />
         </div>
       )}
     </header>

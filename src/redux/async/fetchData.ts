@@ -55,14 +55,14 @@ export const getData = createAsyncThunk<Data, void>("fetch/data", async () => {
 
 export const getCategories = createAsyncThunk<Category[], void>("fetch/category", async () => {
     const response = await axios.get(`${API_URL}/category`);
-    return response.data;
+    return response.data.category;
 });
 
 export const getProducts = createAsyncThunk<Product[], { page: number; limit: number }>(
     "fetch/products",
     async ({ page, limit }) => {
         const response = await axios.get(`${API_URL}/products?page=${page}&limit=${limit}`);
-        return response.data;
+        return response.data.products;
     }
 );
 
@@ -70,7 +70,7 @@ export const getTestimonials = createAsyncThunk<Testimonial[], { page: number; l
     "fetch/testimonials",
     async ({ page, limit }) => {
         const response = await axios.get(`${API_URL}/testimonials?page=${page}&limit=${limit}`);
-        return response.data;
+        return response.data.testimonials;
     }
 );
 
@@ -83,8 +83,8 @@ export const subscribe = createAsyncThunk<SubscribeResponse, string>("fetch/subs
 const fetchSlice = createSlice({
     name: 'fetch',
     initialState: {
-        header: null as Header | null,
-        data: null as Data | null,
+        header: {} as Header | null,
+        data: {} as Data | null,
         categories: [] as Category[],
         products: [] as Product[],
         testimonials: [] as Testimonial[],
@@ -161,9 +161,8 @@ const fetchSlice = createSlice({
                 state.loading = false;
                 state.subscribeMessage = action.payload.message;
             })
-            .addCase(subscribe.rejected, (state, action) => {
+            .addCase(subscribe.rejected, (state) => {
                 state.loading = false;
-                state.error = action.error.message || 'Failed to subscribe';
             });
     },
 });

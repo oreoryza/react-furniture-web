@@ -21,7 +21,7 @@ const Products: React.FC = () => {
   };
 
   const handlePrevPage = () => {
-    setCurrentPage((prevPage) => Math.max(prevPage - 1, 1)); // Pastikan tidak kurang dari 1
+    setCurrentPage((prevPage) => Math.max(prevPage - 1, 1));
   };
 
   if (error) {

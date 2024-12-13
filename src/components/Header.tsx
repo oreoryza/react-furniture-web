@@ -8,8 +8,6 @@ const Header: React.FC = () => {
   const dispatch: AppDispatch = useDispatch();
   const header = useSelector((state: any) => state.fetch.header);
   const data = useSelector((state: any) => state.fetch.data);
-  const loading = useSelector((state: any) => state.fetch.loading);
-  const error = useSelector((state: any) => state.fetch.error);
 
   useEffect(() => {
     dispatch(getHeader());
